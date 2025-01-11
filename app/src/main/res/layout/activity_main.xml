@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/battery_icon"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_battery"
+            android:contentDescription="Battery icon"
+            android:layout_alignParentStart="true"
+            app:tint="@color/greyColor"/>
+
+        <TextView
+            android:id="@+id/batteryTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 %"
+            android:textSize="16sp"
+            android:textColor="@color/greyColor"
+            android:layout_toEndOf="@id/battery_icon"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/km_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="-136dp"
+            android:layout_toStartOf="@id/battery_icon"
+            android:text="- 100 km"
+            android:textSize="16sp"
+            android:textColor="@color/greyColor"/>
+
+        <TextView
+            android:id="@+id/date_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HH:MM DD/MMM/YYYY"
+            android:textColor="@color/greyColor"
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"/>
+
+        <ImageView
+            android:id="@+id/music_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="80dp"
+            android:contentDescription="Music icon"
+            android:src="@drawable/ic_music"
+            app:tint="@color/greyColor" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/menu"
+            android:src="@drawable/ic_menu"
+            app:tint="@color/greyColor"/>
+        <View
+            android:id="@+id/view3"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="540dp"
+            android:layout_height="1dp"
+            android:background="@color/lineGreyColor" />
+        <LinearLayout
+            android:id="@+id/image_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="41dp">
+
+            <LinearLayout
+                android:id="@+id/search_container1"
+                android:layout_width="400dp"
+                android:layout_height="454dp"
+                android:background="@color/black"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="400dp"
+                    android:layout_height="395dp"
+                    android:background="@color/black"
+                    android:contentDescription="First Image"
+                    android:src="@drawable/badboy" />
+                <LinearLayout
+                    android:id="@+id/text_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal"
+                    android:background="@color/black">
+
+                    <!-- TextView 1 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/psifr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="50 psi"
+                            android:textSize="16sp"
+                            android:textColor="@color/greyColor"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:id="@+id/frontLeft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Front Right"
+                            android:textSize="12sp"
+                            android:textColor="@color/greyColor"/>
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="1dp"
+                        android:layout_height="43dp"
+                        android:layout_marginStart="30dp"
+                        android:background="@color/lineGreyColor" />
+
+                    <!-- TextView 2 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/psifl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="40 psi"
+                            android:textSize="16sp"
+                            android:textColor="@color/greyColor"/>
+
+                        <TextView
+                            android:id="@+id/frontRear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Front Left"
+                            android:textSize="12sp"
+                            android:textColor="@color/greyColor"/>
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="1dp"
+                        android:layout_height="43dp"
+                        android:layout_marginStart="30dp"
+                        android:background="@color/lineGreyColor" />
+
+                    <!-- TextView 3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/psir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="40 psi"
+                            android:textSize="16sp"
+                            android:textColor="@color/greyColor"/>
+
+                        <TextView
+                            android:id="@+id/frontRight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rear"
+                            android:textSize="12sp"
+                            android:textColor="@color/greyColor"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/search_container"
+                android:layout_width="match_parent"
+                android:layout_height="454dp"
+                android:orientation="horizontal"
+                android:layout_marginStart="80dp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <fragment
+                        android:id="@+id/id_map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                    <ImageView
+                        android:id="@+id/btn_search_places"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:contentDescription="Search icon"
+                        android:padding="8dp"
+                        android:src="@android:drawable/ic_menu_search"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:tint="@color/greyColor" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="366dp">
+                        <TextView
+                            android:id="@+id/endAddress"
+                            android:layout_width="512dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:text=""
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:gravity="center"
+                            android:paddingStart="180dp"
+                            android:textColor="@color/greyColor"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1.0" />
+                        <TextView
+                            android:id="@+id/tv_distance_duration"
+                            android:layout_width="512dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:text=""
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:gravity="center"
+                            android:paddingStart="230dp"
+                            android:textColor="@color/greyColor"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1.0" />
+                        <LinearLayout
+                            android:layout_width="512dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:id="@+id/linear">
+                            <Button
+                                android:id="@+id/start"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_above="@+id/tv_instructions"
+                                android:text="Start"
+                                android:layout_marginStart="250dp"
+                                 />
+
+                            <Button
+                                android:id="@+id/directions"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_above="@+id/tv_instructions"
+                                android:layout_marginBottom="-325dp"
+                                android:layout_marginStart="5dp"
+                                android:text="Directions"
+                                app:srcCompat="@drawable/right_indicator" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/mela_image"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginBottom="73dp"
+        android:contentDescription="Mela Image"
+        android:src="@drawable/triangle" />
+    <LinearLayout
+        android:id="@+id/icon_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="395dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/left_indicator"
+            android:contentDescription="Icon 1"/>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            app:srcCompat="@drawable/lowbeam"
+            android:contentDescription="Icon 2"/>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            app:srcCompat="@drawable/highbeam"
+            android:contentDescription="Icon 3"/>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            app:srcCompat="@drawable/hazard"
+            android:contentDescription="Icon 4"/>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            app:srcCompat="@drawable/right_indicator"
+            android:contentDescription="Icon 4"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/icon_container1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="325dp"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="304dp"
+            android:layout_height="304dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="130dp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="200dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="@color/black">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/circularProgressIndicator"
+                android:layout_width="340dp"
+                android:layout_height="340dp"
+                android:indeterminate="false"
+                android:layout_marginEnd="20dp"
+                app:indicatorColor="@color/greyColor"
+                app:indicatorSize="300dp"
+                app:trackColor="@color/lineGreyColor"
+                app:trackThickness="8dp"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="308dp"
+                android:layout_height="300dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="40dp"
+                android:layout_centerInParent="true"
+                app:srcCompat="@drawable/bat" />
+
+            <com.github.anastr.speedviewlib.TubeSpeedometer
+                android:id="@+id/speedView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Speedometer"
+                android:padding="35dp"
+                app:sv_speedometerWidth="10dp"
+                />
+            <TextView
+                android:id="@+id/speedTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="80sp"
+                android:layout_marginStart="128dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="90dp"
+                android:layout_below="@+id/speedView"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/kmph"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:text="kmph"
+                android:textSize="16sp"
+                android:textColor="@color/blueColor"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="128dp"/>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="230dp"
+                android:text="R"
+                android:textColor="@color/greyColor"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="145dp"
+                android:layout_marginTop="230dp"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:text="P" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="230dp"
+                android:layout_marginStart="190dp"
+                android:textSize="22sp"
+                android:textColor="@color/greyColor"
+                android:text="D" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="420dp"
+        android:paddingStart="492dp">
+
+        <View
+            android:id="@+id/batteryView"
+            android:layout_width="3dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/lineGreyColor" />
+
+        <ImageView
+            android:id="@+id/battery_icon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_battery"
+            app:tint="@color/greyColor"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 %"
+            android:layout_marginTop="475dp"
+            android:layout_marginStart="450dp"
+            android:id="@+id/progressText"
+            android:textColor="@color/lineGreyColor"
+            android:textSize="24sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - 100km"
+            android:layout_marginTop="475dp"
+            android:layout_marginStart="0dp"
+            android:id="@+id/kmTxt"
+            android:textColor="@color/lineGreyColor"
+            android:textSize="24sp"
+            />
+    </LinearLayout>
+    <View
+        android:id="@+id/view6"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="511dp"
+        android:layout_marginBottom="120dp"
+        android:layout_height="1dp"
+        android:background="@color/lineGreyColor" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="512dp"
+        android:padding="10dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- First TextView -->
+        <TextView
+            android:id="@+id/pastTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Past 10 km"
+            android:textSize="24sp"
+            android:textColor="@color/greyColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Second TextView -->
+        <TextView
+            android:id="@+id/avgTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avg W/km"
+            android:textColor="@color/greyColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pastTxt"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- LineChart within a nested ConstraintLayout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chartContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toEndOf="@id/pastTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="30dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barChart"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="ExtraText,MissingClass"
+                android:layout_centerInParent="true"
+                >
+
+            </com.github.mikephil.charting.charts.BarChart>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/grey"
+        app:menu="@menu/nav_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
